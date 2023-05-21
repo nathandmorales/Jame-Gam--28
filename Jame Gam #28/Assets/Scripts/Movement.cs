@@ -33,9 +33,15 @@ public class Movement : MonoBehaviour
         rb.velocity = movement; // Apply movement to the Rigidbody
 
         // If you want to flip the character sprite based on the direction of movement, uncomment the following code:
-        // if (moveX < 0)
-        //     transform.localScale = new Vector3(-1, 1, 1);
-        // else if (moveX > 0)
-        //     transform.localScale = new Vector3(1, 1, 1);
+        /*
+        if (moveX < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (moveX > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        */
     }
 }

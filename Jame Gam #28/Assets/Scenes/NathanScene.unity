@@ -607,6 +607,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787197380}
   m_CullTransparentMesh: 1
+--- !u!95 &2097891207 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4410749270459896361, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+  m_PrefabInstance: {fileID: 4410749271450064302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2123978326
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +695,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4410749270459896362, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270459896363, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270459896363, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0932
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270459896365, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270459896365, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270819711183, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749270819711183, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410749271117300480, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4410749271117300481, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -754,5 +791,9 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 2123978328}
+    - target: {fileID: 4410749271117300508, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
+      propertyPath: wepAnim
+      value: 
+      objectReference: {fileID: 2097891207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b7f20c37bc27a4780bdc711ddc0bcc, type: 3}
