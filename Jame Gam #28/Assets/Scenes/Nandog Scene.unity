@@ -5289,7 +5289,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -934177256, guid: 13131e784806d284b9fcc627ac40f1aa, type: 3}
   m_Color: {r: 0, g: 0.8227353, b: 1, a: 1}
   m_FlipX: 0
@@ -5465,6 +5465,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpForce: 5
+  groundCheck: {fileID: 1075168224}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  groundCheckRadius: 0.2
   anim: {fileID: 0}
 --- !u!95 &677751415
 Animator:

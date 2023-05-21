@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Movement : MonoBehaviour
 {
     public float speed = 5f; // Movement speed of the player
-
+    public float jumpForce = 5f;
+    public Transform groundCheck;
+    public Tilemap groundTilemap;
+    public float groundCheckRadius = 0.2f;
+    private bool isGrounded;
     private Rigidbody2D rb;
     public Animator anim;
 
@@ -18,6 +23,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         float moveX = Input.GetAxis("Horizontal"); // Get horizontal input (left/right arrow keys, A/D keys, or joystick)
+        isGrounded = CheckGrounded();
 
         if (moveX == 0)
         {
@@ -32,6 +38,11 @@ public class Movement : MonoBehaviour
 
         rb.velocity = movement; // Apply movement to the Rigidbody
 
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
+
         // If you want to flip the character sprite based on the direction of movement, uncomment the following code:
         /*
         if (moveX < 0)
@@ -43,5 +54,20 @@ public class Movement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
         */
+    }
+
+    private bool CheckGrounded()
+    {
+        // Convert the ground check position to tile coordinates
+        Vector3Int tilePosition = groundTilemap.WorldToCell(groundCheck.position);
+
+        // Check if there is a tile at the current position
+        return groundTilemap.HasTile(tilePosition);
+    }
+
+    private void Jump()
+    {
+        // Apply vertical force to make the character jump
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 }
