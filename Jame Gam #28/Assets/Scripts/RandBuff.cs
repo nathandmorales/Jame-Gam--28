@@ -6,7 +6,7 @@ public class RandBuff : MonoBehaviour {
 
     public Movement movementScript;
 
-    movementScript.speed;
+    //movementScript.speed;
 
     // Start is called before the first frame update
     void Start() {
