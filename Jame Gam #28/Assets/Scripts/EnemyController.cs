@@ -9,16 +9,39 @@ public class EnemyController : MonoBehaviour
     public int damage = 10;
 
     private Rigidbody2D rb;
+    private bool isJumping = false;
+    private float jumpForce = 5f;
+    private Transform player;
+ 
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void Update()
+private void Update()
+{
+    Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f);
+    direction.Normalize();
+
+    rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+
+    // Check if the player is higher than the enemy
+    if (player.position.y > transform.position.y + 0.5f)
     {
-        // Implement enemy movement logic here
+        if (!isJumping)
+        {
+            isJumping = true;
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
+    else
+    {
+        isJumping = false;
+    }
+}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

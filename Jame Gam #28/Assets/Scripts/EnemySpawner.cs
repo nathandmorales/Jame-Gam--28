@@ -27,7 +27,7 @@ private IEnumerator SpawnEnemies()
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            GameObject newEnemy = Instantiate(enemyPrefab, availablePlaces[Random.Range(0, 8)], Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemyPrefab, availablePlaces[Random.Range(0, 17)], Quaternion.identity);
             SpriteRenderer spriteRenderer = newEnemy.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = enemySprites[Random.Range(0, enemySprites.Length)];
         }
