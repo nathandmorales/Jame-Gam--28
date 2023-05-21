@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public GameObject hitIndicater;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         CheckDeath();
+        DamageTest();
     }
 
 
@@ -62,7 +64,16 @@ public class PlayerHealth : MonoBehaviour
     public void Hit(int dmg)
     {
         health -= dmg;
+        hitIndicater.SetActive(true);
         //GetComponent<AudioSource>().playerHit.Play();
         //screenShake.Shake();
+    }
+
+    public void DamageTest()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Hit(1);
+        }
     }
 }

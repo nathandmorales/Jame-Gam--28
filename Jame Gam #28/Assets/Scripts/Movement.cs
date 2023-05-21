@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
 
         rb.velocity = movement; // Apply movement to the Rigidbody
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
